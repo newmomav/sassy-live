@@ -2,14 +2,19 @@
   "name": "sassy-live",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "sass --watch main.scss main.css"
+    "start": "sass --watch main.scss main.css",
+    "build": "parcel build index.html --dist-dir build --public-url ./",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "parcel": "^2.8.3",
     "sass": "^1.59.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
